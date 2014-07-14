@@ -1,0 +1,9 @@
+[package]
+
+name = "flaky-data-structures"
+version = "0.1.0"
+authors = [ "dsyang92@gmail.com" ]
+
+[[lib]]
+
+name = "structures"
