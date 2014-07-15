@@ -18,6 +18,7 @@ also plays well with the pure functional approach.
 */
 
 
+
 //extern mod extra;
 use std::rc;
 //use std::gc;
@@ -354,4 +355,14 @@ fn check_push() {
 
     let (_, q) = pop(&q);
     assert!(peek(&q) == Some("a"));
+}
+
+#[quickcheck]
+fn quick_check_pop(xs: Vec<int>) -> bool {
+    let l = from_vec(xs.as_slice());
+    let (x,xs) = pop(&l);
+    match x {
+        Some(e) => { l == cons(e, xs) }
+        None => { true }
+    }
 }

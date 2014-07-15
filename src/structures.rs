@@ -3,9 +3,12 @@ Structures.rs
 Crate file for the library
 */
 
-#![feature(managed_boxes)]
+#![feature(managed_boxes, phase)]
 #[link(name = "structures", vers = "0.1", author = "pdn")]
-//extern crate extra;
+extern crate quickcheck;
+#[phase(plugin)]
+extern crate quickcheck_macros;
+
 
 
 pub mod trees

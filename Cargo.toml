@@ -7,3 +7,10 @@ authors = [ "dsyang92@gmail.com" ]
 [[lib]]
 
 name = "structures"
+
+
+[dependencies.quickcheck]
+git = "https://github.com/BurntSushi/quickcheck"
+
+[dependencies.quickcheck_macros]
+git = "https://github.com/BurntSushi/quickcheck"
